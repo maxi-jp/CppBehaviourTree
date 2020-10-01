@@ -47,6 +47,9 @@ public:
     bool IsFailure() { return tState == TaskState::FAILURE; }
     bool IsRunning() { return tState == TaskState::RUNNING; }
 
+    virtual void Reset() = 0;
+    virtual void Tick(Bot* bot, World* world) = 0;
+
     const std::string& ToString() { return std::string(""); // TODO
     }
 };

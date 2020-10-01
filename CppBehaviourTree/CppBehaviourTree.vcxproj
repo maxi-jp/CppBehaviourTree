@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClInclude Include="src\BehaviourTree.h" />
     <ClInclude Include="src\Bot.h" />
+    <ClInclude Include="src\Idle.h" />
+    <ClInclude Include="src\MoveTo.h" />
     <ClInclude Include="src\Task.h" />
     <ClInclude Include="src\World.h" />
   </ItemGroup>
@@ -28,6 +30,8 @@
     <ClCompile Include="src\BehaviourTree.cpp" />
     <ClCompile Include="src\Bot.cpp" />
     <ClCompile Include="src\CppBehaviourTree.cpp" />
+    <ClCompile Include="src\Idle.cpp" />
+    <ClCompile Include="src\MoveTo.cpp" />
     <ClCompile Include="src\Task.cpp" />
     <ClCompile Include="src\World.cpp" />
   </ItemGroup>

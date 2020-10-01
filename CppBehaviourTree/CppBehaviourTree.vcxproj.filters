@@ -27,6 +27,12 @@
     <ClInclude Include="src\Bot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\MoveTo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Idle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Task.cpp">
@@ -42,6 +48,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Bot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MoveTo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Idle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

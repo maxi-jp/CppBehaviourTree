@@ -31,16 +31,21 @@ public:
     virtual ~Bot();
 
     std::string& GetName() { return name; }
-    char GetSkin() { return skin; }
-    int GetX() { return x; }
-    int GetY() { return y; }
+    char GetSkin() const  { return skin; }
+    int GetX() const { return x; }
+    int GetY() const { return y; }
 
     void SetWorld(World* world) { this->world = world; }
+    void SetCurrentTask(Task* currentTask) { this->currentTask = currentTask; }
+    void SetCurrentEnemy(Bot* currentEnemy) { this->currentEnemy = currentEnemy; }
 
     void Start();
     void Update();
 
-    bool IsAlive() { return health > 0; }
+    bool IsAlive() const { return health > 0; }
+
+    void Move(int despX, int despY);
+    void Damage(int damage);
 };
 
 #endif
