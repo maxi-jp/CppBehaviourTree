@@ -1,5 +1,6 @@
 #include "MoveTo.h"
 #include "Bot.h"
+#include <iostream>
 
 MoveTo::MoveTo(int x, int y) : Task()
 {
@@ -57,4 +58,9 @@ void MoveTo::Tick(Bot* bot, World* world)
 		else if (!HasReachedDestination(bot))
 			MoveBot(bot);
 	}
+}
+
+std::ostream& operator << (std::ostream& strm, const MoveTo &moveTo)
+{
+	return strm << "MoveTo(" << "estado" << ")";
 }

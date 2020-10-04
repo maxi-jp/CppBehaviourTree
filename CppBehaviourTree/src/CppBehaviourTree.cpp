@@ -31,6 +31,8 @@ int main()
     bot2.SetCurrentEnemy(&bot1);
     bot2.SetCurrentTask(idle);
 
+    bot2.Start();
+
     do 
     {
         // clean the screen
@@ -40,6 +42,9 @@ int main()
         bot2.Update();
 
         world.Draw();
+
+        std::cout << bot1 << std::endl;
+        std::cout << bot2 << std::endl;
     } while (getchar());
 
     //getchar();

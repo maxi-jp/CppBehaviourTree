@@ -12,6 +12,12 @@ public:
 
     void Reset();
     void Tick(Bot* bot, World* world);
+
+    void Start();
+
+    std::string ToString() {
+        return std::string("Idle(" + std::string(tStateToStr.GetStr(tState)) + ")");
+    };
 };
 
 #endif

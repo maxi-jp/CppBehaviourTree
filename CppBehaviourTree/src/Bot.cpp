@@ -50,3 +50,8 @@ void Bot::Damage(int damage)
         std::cout << "bot " << name << " is dead";
     }
 }
+
+std::ostream& operator<<(std::ostream& strm, const Bot& bot)
+{
+    return strm << "Bot[" << bot.skin << "]_task[" << bot.currentTask->ToString() << "]";
+}

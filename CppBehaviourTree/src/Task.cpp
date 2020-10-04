@@ -1,8 +1,11 @@
 #include "Task.h"
+#include <iostream>
 
-Task::Task()
+TaskStateToStr Task::tStateToStr;
+
+Task::Task() : tState (TaskState::SUCCESS)
 {
-
+    
 }
 
 Task::~Task()

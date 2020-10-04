@@ -11,6 +11,12 @@ Idle::~Idle()
 
 }
 
+void Idle::Start()
+{
+	Task::Start();
+	tState = TaskState::SUCCESS;
+}
+
 void Idle::Reset()
 {
 	Start();

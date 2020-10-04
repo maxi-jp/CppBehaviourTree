@@ -18,8 +18,8 @@ enum class TaskState
 
 struct TaskStateToStr
 {
-    /*const char * str[] = { "success", "failure", "running" };
-    const char* GetStr(TaskState tState) { return str[static_cast<std::underlying_type_t<TaskState>>(tState)]; }*/
+    const char * str[3] = { "success", "failure", "running" };
+    const char* GetStr(TaskState tState) { return str[static_cast<std::underlying_type_t<TaskState>>(tState)]; }
 };
 
 class Task
@@ -31,6 +31,8 @@ protected:
     void Succeed();
     void Fail();
 
+    const char* GetTaskStateStr() { return tStateToStr.GetStr(tState); }
+
 public:
     Task();
     virtual ~Task();
@@ -39,19 +41,17 @@ public:
     
     TaskState GetState() { return tState; }
 
-    void Start();
-    //virtual void Reset();
-    //virtual void Tick(Bot* bot, World* world);
-
-    bool IsSuccess() { return tState == TaskState::SUCCESS; }
-    bool IsFailure() { return tState == TaskState::FAILURE; }
-    bool IsRunning() { return tState == TaskState::RUNNING; }
+    virtual void Start();
 
     virtual void Reset() = 0;
     virtual void Tick(Bot* bot, World* world) = 0;
 
-    const std::string& ToString() { return std::string(""); // TODO
-    }
+    bool IsSuccess() const { return tState == TaskState::SUCCESS; }
+    bool IsFailure() const { return tState == TaskState::FAILURE; }
+    bool IsRunning() const { return tState == TaskState::RUNNING; }
+
+    virtual std::string ToString() = 0;
+
 };
 
 #endif
