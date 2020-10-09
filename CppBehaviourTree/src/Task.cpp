@@ -1,5 +1,4 @@
 #include "Task.h"
-#include <iostream>
 
 TaskStateToStr Task::tStateToStr;
 

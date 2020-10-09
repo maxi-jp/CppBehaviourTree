@@ -19,6 +19,7 @@ private:
     int health;
     int damage;
     int range;
+    int rangeSqr;
 
     World* world;
 
@@ -36,6 +37,11 @@ public:
     char GetSkin() const { return skin; }
     int GetX() const { return x; }
     int GetY() const { return y; }
+    int GetHealth() const { return health; }
+    int GetDamage() const { return damage; }
+    int GetRange()  const { return range;  }
+
+    Bot* GetCurrentEnemy() const { return currentEnemy; }
 
     void SetWorld(World* world) { this->world = world; }
     void SetCurrentTask(Task* currentTask)  { this->currentTask = currentTask; }
@@ -48,6 +54,10 @@ public:
 
     void Move(int despX, int despY);
     void Damage(int damage);
+
+    static double DistanceBetweenBots(Bot* botA, Bot* botB);
+    static double DistanceBetweenBotsSquare(Bot* botA, Bot* botB);
+    bool EnemyInRange(Bot* enemy);
 };
 
 #endif
