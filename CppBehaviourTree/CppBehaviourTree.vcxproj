@@ -26,8 +26,13 @@
     <ClInclude Include="src\CheckRange.h" />
     <ClInclude Include="src\Idle.h" />
     <ClInclude Include="src\MoveTo.h" />
+    <ClInclude Include="src\Repeat.h" />
     <ClInclude Include="src\RunAway.h" />
+    <ClInclude Include="src\Selector.h" />
+    <ClInclude Include="src\Sequence.h" />
     <ClInclude Include="src\Task.h" />
+    <ClInclude Include="src\TasksFactory.h" />
+    <ClInclude Include="src\Wander.h" />
     <ClInclude Include="src\World.h" />
   </ItemGroup>
   <ItemGroup>
@@ -39,8 +44,13 @@
     <ClCompile Include="src\CppBehaviourTree.cpp" />
     <ClCompile Include="src\Idle.cpp" />
     <ClCompile Include="src\MoveTo.cpp" />
+    <ClCompile Include="src\Repeat.cpp" />
     <ClCompile Include="src\RunAway.cpp" />
+    <ClCompile Include="src\Selector.cpp" />
+    <ClCompile Include="src\Sequence.cpp" />
     <ClCompile Include="src\Task.cpp" />
+    <ClCompile Include="src\TasksFactory.cpp" />
+    <ClCompile Include="src\Wander.cpp" />
     <ClCompile Include="src\World.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

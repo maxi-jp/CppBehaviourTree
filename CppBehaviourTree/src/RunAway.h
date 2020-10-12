@@ -4,6 +4,7 @@
 #include "Task.h"
 #include "MoveTo.h"
 
+// select a random position on the map and go towards it
 class RunAway : public Task
 {
 private:
